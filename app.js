@@ -137,7 +137,7 @@ app.get("/", function(req, res){
 
 app.get("/results", function(req, res){
 	var query = req.query.search;
-	var url = "http://localhost:9200/logstash-2016.08.25/logs/_search?q=" + query;
+	var url = "http://localhost:9200/logstash_twitter_dev/_search?q=" + query;
 	
 	request(url, function(error, response, body){
 			var bodyObj = JSON.parse(body);
